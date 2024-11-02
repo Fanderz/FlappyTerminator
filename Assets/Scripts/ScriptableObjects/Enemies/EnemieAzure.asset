@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb4eae38c858a140b8ac70312ea137c, type: 3}
+  m_Name: EnemieAzure
+  m_EditorClassIdentifier: 
+  _speed: 2.5
+  _health: 100
+  _damage: 5
+  _shootDelay: 2
+  _sprite: {fileID: -7068613016846842766, guid: 8809690d4ea053c46838e6dc4d3ee7f5, type: 3}
+  _bulletSpawner: {fileID: 8643502844626780421, guid: 45b7a962231b35f4a996bef768bc1909, type: 3}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb4eae38c858a140b8ac70312ea137c, type: 3}
+  m_Name: EnemieOrange
+  m_EditorClassIdentifier: 
+  _speed: 3
+  _health: 100
+  _damage: 5
+  _shootDelay: 2
+  _sprite: {fileID: -6907072107442916967, guid: 019aaa9d1f4d3b049b4309b153ce00da, type: 3}
+  _bulletSpawner: {fileID: 0}
