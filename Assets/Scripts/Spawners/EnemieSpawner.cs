@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemieSpawner : BaseSpawner<EnemieView>
+public class EnemieSpawner : BaseSpawner<EnemyView>
 {
     [SerializeField] private float _spawnDelay;
     [SerializeField] private float _spawnPositionRate;
@@ -10,7 +10,7 @@ public class EnemieSpawner : BaseSpawner<EnemieView>
     [SerializeField] private Transform _ground;
     [SerializeField] private Transform _spawnXPosition;
     [SerializeField] private BulletSpawner _bulletSpawner;
-    [SerializeField] private List<EnemieView> _prefabs;
+    [SerializeField] private List<EnemyView> _prefabs;
 
     protected WaitForSeconds Wait;
 
@@ -39,17 +39,19 @@ public class EnemieSpawner : BaseSpawner<EnemieView>
         while (enabled)
         {
             var randomIndexEnemyPrefab = Random.Range(0, _prefabs.Count);
-            var enemmyprefab = _prefabs[randomIndexEnemyPrefab];
+            var enemyprefab = _prefabs[randomIndexEnemyPrefab];
 
-            var enemie = GetObject(enemmyprefab);
+            var enemyView = GetObject(enemyprefab);
 
-            if (enemie != null)
+            if (enemyView != null)
             {
-                enemie.transform.position = new Vector2(_spawnXPosition.position.x, Random.Range(_ground.position.y + _spawnPositionRate, _upWall.position.y - _spawnPositionRate));
-                enemie.Shooter.ShootingEventHandler.AddListener(_bulletSpawner.SpawnObject);
-                enemie.Collised.AddListener(Release);
+                enemyView.transform.position = new Vector2(_spawnXPosition.position.x, Random.Range(_ground.position.y + _spawnPositionRate, _upWall.position.y - _spawnPositionRate));
+                enemyView.Shooter.ShootingEventHandler.AddListener(_bulletSpawner.SpawnObject);
 
-                Spawn(enemie);
+                var enemy = enemyView.GetComponent<Enemy>();
+                enemy.Collised.AddListener(Release);
+
+                Spawn(enemyView);
             }
 
             yield return Wait;

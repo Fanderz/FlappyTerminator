@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeb4eae38c858a140b8ac70312ea137c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bc4632759ee0e84487b2cf7f1fd053a, type: 3}
   m_Name: EnemieYellow
   m_EditorClassIdentifier: 
   _speed: 2
   _health: 100
   _damage: 5
-  _shootDelay: 2
   _sprite: {fileID: 3530417768772121571, guid: c146b45621e5eee4792798f462216a2e, type: 3}
-  _bulletSpawner: {fileID: 0}

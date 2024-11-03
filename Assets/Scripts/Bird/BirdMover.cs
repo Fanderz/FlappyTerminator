@@ -10,26 +10,28 @@ public class BirdMover : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
     private BirdRotation _rotation;
-    private Animator _animator;
+    private Bird _bird;
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _rotation = GetComponent<BirdRotation>();
-        _animator = GetComponent<Animator>();
+        _bird = GetComponent<Bird>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            _rigidbody.velocity = new Vector2(_speed, _flyForce);
-            _animator.SetBool("Fly", true);
-            _rotation.Rotate();
-        }
-        else
-        {
-            _animator.SetBool("Fly", false);
-        }
+        _bird.Flying += Fly;
+    }
+
+    private void OnDisable()
+    {
+        _bird.Flying -= Fly;
+    }
+
+    private void Fly()
+    {
+        _rigidbody.velocity = new Vector2(_speed, _flyForce);
+        _rotation.Rotate();
     }
 }

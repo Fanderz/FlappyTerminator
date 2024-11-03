@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletMover : MonoBehaviour
 {
-    [SerializeField] private Bullet _bullet;
+    [SerializeField] private BulletData _bullet;
 
     private Vector2 _direction;
 

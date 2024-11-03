@@ -1,11 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "New Bullet", menuName = "Bullet/Create new Bullet", order = 51)]
-public class Bullet : ScriptableObject
+public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private Sprite _sprite;
+    public UnityEvent<BulletView> Collised;
 
-    public Sprite Sprite => _sprite;
-    public float Speed => _speed;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+            Collised?.Invoke(this.GetComponent<BulletView>());
+            Collised.RemoveAllListeners();
+    }
 }

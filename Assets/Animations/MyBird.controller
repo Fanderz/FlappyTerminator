@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Fly
+    m_ConditionEvent: IsFlying
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -573853537292558172}
@@ -74,7 +74,7 @@ AnimatorState:
   m_Motion: {fileID: 7400000, guid: da56024335ea55e4891b24a077932ef9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: Fly
+  m_MirrorParameter: IsFlying
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 --- !u!1102 &-573853537292558172
@@ -113,7 +113,7 @@ AnimatorController:
   m_Name: MyBird
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Fly
+  - m_Name: IsFlying
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -141,7 +141,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Fly
+    m_ConditionEvent: IsFlying
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2742540117398606207}

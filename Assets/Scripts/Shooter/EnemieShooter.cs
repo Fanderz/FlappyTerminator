@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemieShooter : BaseShooter
 {
-    [SerializeField] private Enemie _enemie;
+    [SerializeField] private EnemyData _enemie;
 
     private Coroutine _shootingCoroutine;
 

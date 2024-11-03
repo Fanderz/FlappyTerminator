@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class EnemieMover : MonoBehaviour
+public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] private Enemie _enemie;
+    [SerializeField] private EnemyData _enemie;
 
-    public Enemie Enemie => _enemie;
+    public EnemyData Enemie => _enemie;
 
     private void Update()
     {

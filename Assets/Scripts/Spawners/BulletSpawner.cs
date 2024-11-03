@@ -18,18 +18,20 @@ public class BulletSpawner : BaseSpawner<BulletView>
 
     public void SpawnObject(BulletView bulletViewPrefab, Transform startPosition, Vector2 direction, Quaternion rotation)
     {
-        var bullet = GetObject(bulletViewPrefab);
+        var bulletView = GetObject(bulletViewPrefab);
 
-        if (bullet != null)
+        if (bulletView != null)
         {
-            bullet.transform.position = startPosition.position;
+            bulletView.transform.position = startPosition.position;
+
+            var bullet = bulletView.GetComponent<Bullet>();
             bullet.Collised.AddListener(Release);
 
-            var mover = bullet.GetComponent<BulletMover>();
+            var mover = bulletView.GetComponent<BulletMover>();
             mover.transform.rotation = rotation;
             mover.SetDirection(direction);
 
-            Spawn(bullet);
+            Spawn(bulletView);
         }
     }
 }

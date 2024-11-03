@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 564115980181578975}
   - component: {fileID: 3689877446013160979}
   - component: {fileID: -1199809858961131844}
+  - component: {fileID: 1009447032992857136}
   m_Layer: 6
   m_Name: Enemie_2
   m_TagString: Untagged
@@ -96,15 +97,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8622830735512196077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9691e18744bd4914f9592c1abdf45d61, type: 3}
+  m_Script: {fileID: 11500000, guid: 2db5e2b6175935047b16929d4eb6a0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _enemie: {fileID: 11400000, guid: 3f684ce9c3d54f642bbc3fe0732f7a2a, type: 2}
   _renderer: {fileID: 7404739997910667409}
   _shooter: {fileID: 489298807464272450}
-  Collised:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!212 &7404739997910667409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -189,8 +187,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25354385, y: -0.29858476}
-  m_Size: {x: 4.601398, y: 2.9599607}
+  m_Offset: {x: -0.2236673, y: -0.2367267}
+  m_Size: {x: 3.189755, y: 3.189755}
   m_Direction: 1
 --- !u!114 &3689877446013160979
 MonoBehaviour:
@@ -232,3 +230,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &1009447032992857136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622830735512196077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b73dcbef5170d344a495e8cb1db9c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Collised:
+    m_PersistentCalls:
+      m_Calls: []
